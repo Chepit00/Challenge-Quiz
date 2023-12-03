@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Code Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+</head>
+
+<body>
+
+    <!--link to highscores-->
+    <a href="./assets/scores/highscore.html">View HighScores</a>
+
+    <!--timer div-->
+    <div class="timer">
+        <div class="Timer-text">
+            <div class="larger-font timer-count">75</div>
+        </div>
+    </div>
+    
+
+    <!--main outer div-->
+<div class="main-container">
+
+<!--Quiz content-->
+    <div>
+    
+        <h1>Coding Quiz Challenge</h1>
+
+        <h2 id = "Question"></h2>
+        <!--<ul id="answers"></ul>-->
+
+        <ul id="choicesUl"></ul>
+
+        <button class="start-button">Start</button>
+
+        <button id="next-button"></button>
+    </div>
+ 
+    <div id="initialDiv">
+        <input type="text" id="initials"/>
+        <button id="submit">Save HighScore</button>
+    </div>
+        
+</div>
+<script src="./assets/script.js"></script>
+</body>
+</html>

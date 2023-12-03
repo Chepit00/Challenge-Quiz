@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 15px;
+
+}
+
+li {
+    background-color: rgb(246, 249, 249);
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 80%;
+    font-size: 18px;
+    color: rgb(2, 2, 2);
+}

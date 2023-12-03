@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 15px;
+
+}
+
+body {
+    background-color: rgb(118, 122, 122);
+}
+
+.main-container {
+    position:absolute;
+    left: 35%;
+    top: 20%;
+    width: 500px;
+    height: 500px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    background-color: black;
+}
+
+#Timer {
+    float: right;
+    color: rgb(217, 127, 48);
+    font-size: 25px;
+}
+
+#startTimer {
+    background-color: rgb(217, 127, 48);
+    margin-left: 40%;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+}
+
+#Question {
+    margin: 30px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(217, 127, 48);
+}
+
+#userInfo {
+    margin: 80%;
+    width: 30px;
+}
+
+#submit {
+    background-color: rgb(76, 121, 211);
+        margin-left: 33%;
+        padding: 15px 32px;
+        font-size: 20px;
+        color: white;
+}
+
+.top-bar p {
+    float: right;
+   color: rgb(144, 89, 196);
+   background-color: white;
+}
+
+#choicesUl {
+    color: white;
+}
+
+li {
+    background-color: rgb(246, 249, 249);
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 80%;
+    font-size: 18px;
+    color: rgb(2, 2, 2);
+}
+
