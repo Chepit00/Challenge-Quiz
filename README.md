@@ -26,6 +26,8 @@ Html, JavaScript, CSS,
 
 ## License
 
+MIT
+
 ## Contributing
 
 n/a
