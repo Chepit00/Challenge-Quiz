@@ -85,7 +85,7 @@ function handleChoiceClick(choiceIndex) {
 
 // Function to start the timer
 function startTimer() {
-    const timerInterval = setInterval(function () {
+    timerInterval = setInterval(function () {
         timeLeft--;
         timerElement.textContent = timeLeft;
 
@@ -96,9 +96,22 @@ function startTimer() {
     }, 1000); // Update timer every second
 }
 
-function saveUserScore(scoreData) {
-    timeLeft
+
+// Function to save the user's score
+function saveUserScore() {
+    const userInitials = initials.value;
+    const savedScore = {
+        score: timeLeft,
+        initials: userInitials
+    };
+    scoreArray.push(savedScore);
+  
+    localStorage.setItem("Score", JSON.stringify(scoreArray));
+
+    console.log('Saved Score:', savedScore);
+   
 }
+
 
 
 // Function to end the quiz
@@ -106,39 +119,40 @@ function endQuiz() {
     initialDiv.style.display = "block";
     startButton.style.display = "block"
     // Stop the timer if it's still running
-    timerElement.textContent = "0";
+    timerElement.textContent = timeLeft;
 
+ clearInterval(timerInterval);
+    //Save the user's data to localStorage
+    saveUserScore();
 
-    // Save the user's data to localStorage
-    //saveUserScore(userScoreData);
-
-    // Redirect to the high scores page
-   // window.location.href = "./assets/scores/highscore.html"; // Redirect to the high scores HTML page
-    
 }
 
 
 
 // Event listeners
 //figure out why startQuiz isn't restarting after endQuiz
-startButton.addEventListener("click", startQuiz);
-nextButton.addEventListener("click", () => {
-    currentQuestionIndex++;
-    displayNextQuestion();
-});
+startButton.addEventListener("click", startQuiz); 
+
+//submit button, will save users score then redirect user to HIGHSCORE page
 submitButton.addEventListener("click", function () {
     const userInitials = initials.value;
     const savedScore = {
         score: timeLeft,
         initials: userInitials
-    }
-    scoreArray.push(savedScore)
+    };
+
+    console.log('Score:', savedScore.score);
+    console.log('Initials:', savedScore.initials);
+
+    scoreArray.push(savedScore);
 
     localStorage.setItem("Score", JSON.stringify(scoreArray));
+    console.log('Submit button clicked!');
 
-
-})
+    window.location.href = "assets/scores/highscore.html";
+});
 
 // Initially hide the "Next" button
 nextButton.style.display = "none";
 initialDiv.style.display = "none";
+

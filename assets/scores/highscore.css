@@ -4,11 +4,21 @@
 
 }
 
-li {
-    background-color: rgb(246, 249, 249);
+body {
+    background-color: rgb(118, 122, 122);
+}
+
+div {
+    background-color: black;
+    color: rgb(246, 249, 249);
     margin-top: 10px;
     padding: 5px 15px;
-    width: 80%;
-    font-size: 18px;
-    color: rgb(2, 2, 2);
+    width: 90%;
+    font-size: 25px;
+   
+}
+
+h1 {
+    text-align: center;
+    color: rgb(14, 9, 4);
 }
